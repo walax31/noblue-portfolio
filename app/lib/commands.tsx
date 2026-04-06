@@ -2,9 +2,7 @@ import { ReactNode } from "react";
 
 type CommandFn = (args: string[]) => ReactNode;
 
-const line = (text: string) => (
-  <div className="text-gray-400">{text}</div>
-);
+const line = (text: string) => <div className="text-gray-400">{text}</div>;
 
 const title = (text: string) => (
   <div className="text-gray-200 font-medium mt-2">{text}</div>
@@ -43,7 +41,8 @@ export const commands: Record<string, CommandFn> = {
     <div>
       {section("whoami")}
       {line("noblue (waralak)")}
-      {line("frontend developer")}
+      {line("frontend engineer")}
+      {line("building scalable and data-driven web applications")}
     </div>
   ),
 
@@ -51,15 +50,20 @@ export const commands: Record<string, CommandFn> = {
     <div>
       {section("about")}
 
-      {line("frontend developer")}
-      {line("clean UI")}
-      {line("smooth user experience")}
+      {line("frontend engineer focused on")}
+      {line("clean architecture and scalable UI")}
+      {line("smooth and high-quality user experiences")}
 
       <br />
 
-      {line("SS&C Hubwise")}
-      {line("financial platforms")}
-      {line("adviser & investor systems")}
+      {line("currently at SS&C Hubwise")}
+      {line("building financial platforms")}
+      {line("for advisers and investors")}
+
+      <br />
+
+      {line("experienced in")}
+      {line("complex workflows and data-heavy interfaces")}
     </div>
   ),
 
@@ -67,47 +71,66 @@ export const commands: Record<string, CommandFn> = {
     <div>
       {section("experience")}
 
-      {line("financial products across fintech, banking, crypto")}
+      {line("financial products across fintech, banking, and crypto")}
 
       <br />
 
       {title("[ SS&C Hubwise ]")}
-      {line("frontend developer")}
-      {line("financial platforms")}
-      {line("adviser & investor workflows")}
-      {line("data-heavy UI")}
-      {line("complex user flows")}
+      {line("frontend engineer")}
+
+      <div className="ml-2">
+        {highlight("financial platforms")}
+        <span className="text-gray-400"> for advisers and investors</span>
+      </div>
+
+      <div className="ml-2">{highlight("data-heavy UI")}</div>
+
+      <div className="ml-2">{highlight("complex workflows")}</div>
+
+      <div className="ml-2 text-gray-500">
+        improved usability and performance across key journeys
+      </div>
 
       <br />
 
       {title("[ Kiatnakin Phatra ]")}
       {line("banking systems")}
-      {line("internal tools")}
-      {line("financial operations")}
-      {line("usability")}
-      {line("system reliability")}
+
+      <div className="ml-2">
+        {highlight("internal tools")}
+        <span className="text-gray-400"> for financial operations</span>
+      </div>
+
+      <div className="ml-2">{highlight("usability and reliability")}</div>
+
+      <div className="ml-2 text-gray-500">
+        supported critical business workflows
+      </div>
 
       <br />
 
       {title("[ Bitkub ]")}
       {line("crypto exchange platform")}
 
+      <div className="ml-2">{highlight("scalable UI system")}</div>
+
       <div className="ml-2">
-        {line("scalable UI system")}
+        {highlight("shared component library")}
+        <span className="text-gray-400"> (Tailwind / MUI / Storybook)</span>
       </div>
 
       <div className="ml-2">
-        {line("authentication")}
-        <span className="text-gray-400"> KYC / OTP / OAuth 2.0</span>
+        {highlight("authentication system")}
+        <span className="text-gray-400">
+          {" "}
+          KYC / OTP / login / register / OAuth 2.0
+        </span>
       </div>
 
-      <div className="ml-2">
-        {line("real-time data")}
-        <span className="text-gray-400"> integration</span>
-      </div>
+      <div className="ml-2">{highlight("real-time data integration")}</div>
 
       <div className="ml-2 text-gray-500">
-        market page (feature / bug fix / UI)
+        market page (feature / bug fix / UI improvements)
       </div>
     </div>
   ),
@@ -119,20 +142,23 @@ export const commands: Record<string, CommandFn> = {
       {title("frontend")}
       {line("React / Next.js / TypeScript")}
 
+      {title("architecture")}
+      {line("scalable UI / component systems")}
+
       {title("state")}
       {line("Redux / Zustand")}
 
       {title("styling")}
       {line("Tailwind / CSS")}
 
-      {title("backend")}
-      {line("Node.js / Express")}
+      {title("backend integration")}
+      {line("REST API / GraphQL")}
 
       {title("data")}
-      {line("GraphQL / PostgreSQL")}
+      {line("PostgreSQL")}
 
       {title("tools")}
-      {line("Git / Docker / Analytics")}
+      {line("Git / Docker / Storybook")}
     </div>
   ),
 
@@ -141,24 +167,33 @@ export const commands: Record<string, CommandFn> = {
       {section("projects")}
 
       {title("Terminal Portfolio")}
-      {line("CLI-style portfolio")}
-      {line("Next.js + Tailwind")}
+      {line("interactive CLI-style portfolio")}
+      {line("built with Next.js and Tailwind")}
+
+      <br />
+
+      {title("E-commerce Platform")}
+      {line("full product browsing and shopping flow")}
+      {line("state management with Zustand")}
+      {line("cart, favorites, and UI interactions")}
 
       <br />
 
       {title("Financial Platforms")}
-      {line("adviser & investor workflows")}
-      {line("data-heavy UI")}
+      {line("adviser and investor workflows")}
+      {line("complex and data-heavy interfaces")}
 
       <br />
 
       {title("Authentication Systems")}
-      {line("OAuth / KYC / OTP / 2FA")}
+      {line("secure flows")}
+      {line("KYC / OTP / OAuth 2.0")}
 
       <br />
 
       {title("Real-time Data")}
       {line("WebSocket integration")}
+      {line("live data handling")}
     </div>
   ),
 
@@ -167,19 +202,13 @@ export const commands: Record<string, CommandFn> = {
       {section("contact")}
 
       {title("email")}
-      <div className="text-yellow-300">
-        waralak.khamnoi@gmail.com
-      </div>
+      <div className="text-yellow-300">waralak.khamnoi@gmail.com</div>
 
       {title("github")}
-      <div className="text-yellow-300">
-        github.com/walax31
-      </div>
+      <div className="text-yellow-300">github.com/walax31</div>
 
       {title("linkedin")}
-      <div className="text-yellow-300">
-        linkedin.com/in/waralak-khamnoi
-      </div>
+      <div className="text-yellow-300">linkedin.com/in/waralak-khamnoi</div>
     </div>
   ),
 
@@ -211,28 +240,27 @@ export const commands: Record<string, CommandFn> = {
   hire: () => (
     <div>
       {section("hire")}
-      {line("let's build something awesome 🚀")}
+      {line("let's build something impactful 🚀")}
+      {line("open for frontend roles and opportunities")}
+
       <br />
-      <div className="text-yellow-300">
-        waralak.khamnoi@gmail.com
-      </div>
+
+      <div className="text-yellow-300">waralak.khamnoi@gmail.com</div>
     </div>
   ),
   github: () => (
-  <div>
-    {section("github")}
+    <div>
+      {section("github")}
 
-    <a
-      href="https://github.com/walax31/noblue-portfolio"
-      target="_blank"
-      className="text-yellow-300 underline"
-    >
-      github.com/walax31/noblue-portfolio
-    </a>
+      <a
+        href="https://github.com/walax31/noblue-portfolio"
+        target="_blank"
+        className="text-yellow-300 underline"
+      >
+        github.com/walax31/noblue-portfolio
+      </a>
 
-    <div className="text-gray-500 mt-1">
-      open source project
+      <div className="text-gray-500 mt-1">open source project</div>
     </div>
-  </div>
-),
+  ),
 };
