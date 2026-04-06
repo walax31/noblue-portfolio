@@ -35,15 +35,23 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-# Terminal Portfolio
+# Noblue Terminal Portfolio
 
 Interactive CLI-style portfolio built with Next.js
 
-## Features
-- command system
-- autocomplete
-- command history
-- terminal UI
+## 🚀 Features
 
-## Demo
-👉 https://noblue-cli.vercel.app
+- Command system
+- Autocomplete
+- Command history
+- Interactive terminal UI
+
+## 🧠 Tech Stack
+
+- Next.js
+- React
+- Tailwind CSS
+
+## 🌐 Demo
+
+https://noblue-cli.vercel.app
